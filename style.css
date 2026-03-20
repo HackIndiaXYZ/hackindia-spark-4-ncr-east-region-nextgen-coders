@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+.bg-animation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg,#ff6ec4,#7873f5,#00c9ff,#92fe9d);
+    background-size: 800% 800%;
+    animation: gradient 12s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradient {
+    0% {background-position:0%}
+    50% {background-position:100%}
+    100% {background-position:0%}
+}
+
+
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.glass {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+
+textarea {
+    width: 70%;
+    height: 120px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+
+
+button {
+    margin-top: 15px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg,#ff6ec4,#7873f5);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+
+.cards {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 15px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+.loader {
+    border: 5px solid white;
+    border-top: 5px solid pink;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    100% {transform: rotate(360deg);}
+}
